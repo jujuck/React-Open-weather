@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function City() {
-  return <div>City</div>;
+  const { ville } = useParams();
+  return <div className="container">{ville}</div>;
 }
 
 export default City;
