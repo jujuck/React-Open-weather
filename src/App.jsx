@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
             onChange={(event) => setCity(event.target.value)}
           />
         </label>
-        <a href={`/${city}`}>Allez voir la météo de la ville de {city}</a>
+        <Link to={`/${city}`}>Allez voir la météo de la ville de {city}</Link>
       </section>
     </main>
   );
