@@ -13,6 +13,13 @@ const router = createBrowserRouter([
   {
     path: "/:ville",
     element: <City />,
+    loader: ({ params }) => {
+      return fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${params.ville}&appid=be2ca3b8b2cc729c8268e5b846ba6853`
+      )
+        .then((res) => res.json())
+        .then((json) => json);
+    },
   },
 ]);
 
